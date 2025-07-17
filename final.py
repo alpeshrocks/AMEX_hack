@@ -95,9 +95,24 @@ for col in numerical_cols:
     test_df[col].fillna(median_val, inplace=True)
 
 for col in categorical_cols:
-    mode_val = train_df[col].mode()[0]
-    train_df[col].fillna(mode_val, inplace=True)
-    test_df[col].fillna(mode_val, inplace=True)
+    # --- Robust Categorical Imputation ---
+
+# Get the mode of the training column
+    modes = train_df[col].mode()
+
+    # Check if the mode series is not empty
+    if not modes.empty:
+        # If modes exist, use the first one as the fill value
+        mode_val = modes[0]
+        train_df[col].fillna(mode_val, inplace=True)
+        test_df[col].fillna(mode_val, inplace=True)
+    else:
+        # If the column was all NaN, fill with a placeholder like "Unknown"
+        # This requires adding "Unknown" to the categories first.
+        train_df[col] = train_df[col].cat.add_categories("Unknown")
+        test_df[col] = test_df[col].cat.add_categories("Unknown")
+        train_df[col].fillna("Unknown", inplace=True)
+        test_df[col].fillna("Unknown", inplace=True)
 
 # Scale numerical features
 scaler = StandardScaler()
