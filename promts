@@ -1,0 +1,38 @@
+1st:
+
+Amex desicion track:
+
+Prediction of probability to click for a customer for a given offerings on a particular day given that customer has seen the offerings.
+
+The end objective of this problem statement is to show the most relevant offers on the top ranks to increase customer's clicks and hence overall engagement with the offers.
+
+
+
+Participants can use existing variables, create derived variables from existing ones and use them in their decision science solution.
+
+Participants must not use identifier variables in their solution.
+
+Participants are not allowed to add new rows or alter the shared data.
+
+The created solution must be run on all unique identifiers.
+
+Participants need to submit 1 file in Round 2.
+
+Participants should try to create a decision science solution that is scalable in the real world, keeping in mind the evaluation criteria.
+
+Participants are required to download and follow the exact templates of the submission files as shared above.
+
+The submissions should follow the naming convention: r2_submission_file<team-name>.csv
+
+Max submissions allowed per team in Round 2 for File 1 are 20, the leaderboard would be public submissions of File, and the team would be rank ordered basis max final score attained.
+
+AMEX will be thoroughly evaluating all solutions to ensure integrity & guarding against any misuse or gaming.
+
+
+
+dont respond yet just under stad all the information. We have been provided 7 files whose summary report i have attached go through that.
+
+
+
+2nd:
+Now i want you to behave as a professional data scientist and write code blocks sequence by sequence to be executed in my local environment. i'll be providing you with the outputs after each step to help you take decisions and go forward. dont hallucinate and remember end goal. do experimentation and everything and get outputs in such a format that it will be easier for me to to give it to you.
